@@ -4,6 +4,7 @@ namespace CommonDomain.Core
 	using System.Collections;
 	using System.Collections.Generic;
 
+    [Serializable]
 	public abstract class AggregateBase : IAggregate, IEquatable<IAggregate>
 	{
 		private readonly ICollection<object> uncommittedEvents = new LinkedList<object>();
